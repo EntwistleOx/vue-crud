@@ -1,6 +1,6 @@
-# Vue CRUD
+# Vue CRUD with Firebase Functions.
 
-Challenge for Desafio Latam. Using VueJS, Vuex, Vue Router, Element UI, Firestore and Axios.
+Challenge for Desafio Latam. Using VueJS, Vuex, Vue Router, Element UI, Firestore, Firebase Functions and Axios.
 
 ## Project setup
 
