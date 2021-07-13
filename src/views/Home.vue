@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <el-row>
+      <el-col :span="12" :offset="6">
+        <div class="grid-content">
+          <Form />
+          <Table />
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { mapActions } from "vuex";
+
+import Form from "@/components/Form.vue";
+import Table from "@/components/Table.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Form,
+    Table,
+  },
+  mounted() {
+    this.fetchUsers();
+  },
+  methods: {
+    ...mapActions(["fetch_Users"]),
+    fetchUsers() {
+      this.fetch_Users();
+    },
   },
 };
 </script>
